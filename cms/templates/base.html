@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Painel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="container">
+                <div id="sideright">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Click
+                        </button>
+                        <ul class="dropdown-menu" aria-label="dropdownMenuButton">
+                            <a href="#" class="dropdown-item"><li><i class="material-icons" style="font-size: 12px; padding:2px 4px; margin-left: -5px;">settings</i>Configurações</li></a>
+                            <a href="#" class="dropdown-item"><li><i class="material-icons" style="font-size: 12px; padding:2px 4px; margin-left: -5px;">close</i>Sair</li></a>
+                        </ul>
+                    </div>
+                </div><!--sideright-->
+                <div id="sideleft">
+                    <a href="/"><h4>Painel</h4></a>
+                </div><!--sideleft-->
+            </div>
+        </div>
+        <div class="row">
+        <div class="container" id="body">
+
+
+            <div id="sideleft" class="col-6 col-md-4">
+                <div class="menu-de-opcoes">
+                    <ul class="menu">
+                        <a href="/novo-usuario/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">group_add</i>Cadastrar novo usuário</li></a>
+                        <a href="/cadastrar-cliente/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">person_add</i>Cadastrar novo cliente</li></a>
+                        <a href="/cadastrar-produtos/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">add_circle</i>Cadastar produtos</li></a>
+                        <a href="/nova-nota/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">note</i>Cadastar notas</li></a>
+                        <a href="/nova-venda/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">shopping_cart</i>Realizar venda</li></a>
+                        <a href="/estoque/"><li><i class="material-icons" style="font-size: 15px; padding:0 4px;">store</i>Consultar estoque</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="sideright" class="col-12 col-md-8">
+                {% block content %}
+                    <h1>bem vindo</h1>
+                {% endblock %}
+            </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
