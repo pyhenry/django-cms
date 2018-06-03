@@ -38,11 +38,13 @@ div#body div#sideleft div.menu-de-opcoes i{
 }
 
 div#body div#sideright{
-    text-align: center;
     margin-bottom: 50px;
     background: #28884B;
     margin-top: -21%;
     height: 300px;
+}
+div#body div#sideright div#novo_usuario{
+    padding: 5px 5px;
 }
 /*
 @media (max-width:1200px){

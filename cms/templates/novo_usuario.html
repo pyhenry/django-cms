@@ -3,5 +3,13 @@
 {% block content %}
 
 <h2>Cadastrar novo usuário</h2>
+<form method="POST">
+        {% csrf_token %}
+        <div><span>Nome</span>{{ form.nome }}</div>
+        <div><span>Sobrenome</span>{{ form.sobrenome }}</div>
+        <div><span>Senha</span>{{ form.senha }}</div>
+        <button type="submit">Cadastrar</button>
+    </div>
+</form>
 
 {% endblock %}
