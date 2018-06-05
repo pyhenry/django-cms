@@ -10,7 +10,3 @@ class Novo_Usuario(models.Model):
 
     def __str__(self):
         return self.nome
-
-    def save(self):
-    	if not self.nome:
-    		print('ok')
